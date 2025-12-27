@@ -4,21 +4,25 @@
 	"Author": "Kirk Nunn",
 	"Actions": [
 		{
-			"Name": "Counter",
-			"UUID": "com.kirk-nunn.big-light.increment",
-			"Icon": "imgs/actions/counter/icon",
-			"Tooltip": "Displays a count, which increments by one on press.",
-			"PropertyInspectorPath": "ui/increment-counter.html",
-			"Controllers": [
-				"Keypad"
-			],
-			"States": [
-				{
-					"Image": "imgs/actions/counter/key",
-					"TitleAlignment": "middle"
-				}
-			]
-		}
+            "Name": "Light Toggle",
+            "UUID": "com.kirk-nunn.big-light.toggle",
+            "Icon": "imgs/actions/light/key",
+            "Tooltip": "Toggles the big light and opens a URL.",
+            "PropertyInspectorPath": "ui/light-settings.html",
+            "Controllers": ["Keypad"],
+            "States": [
+                {
+                    "Image": "imgs/actions/counter/icon",
+                    "Title": "Off",
+                    "TitleAlignment": "bottom"
+                },
+                {
+                    "Image": "imgs/actions/counter/key",
+                    "Title": "On",
+                    "TitleAlignment": "bottom"
+                }
+            ]
+        }
 	],
 	"Category": "Big Light",
 	"CategoryIcon": "imgs/plugin/category-icon",
