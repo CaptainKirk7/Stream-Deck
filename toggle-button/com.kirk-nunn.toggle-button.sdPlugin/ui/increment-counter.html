@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html>
-
 <head lang="en">
-    <title>Increment Counter Settings</title>
+    <title>Website Toggle Settings</title>
     <meta charset="utf-8" />
     <script src="https://sdpi-components.dev/releases/v4/sdpi-components.js"></script>
 </head>
-
 <body>
-    <!--
-        Learn more about property inspector components at https://sdpi-components.dev/docs/components
-    -->
-    <sdpi-item label="Increment By">
-        <sdpi-range setting="incrementBy" min="1" max="5" step="1" default="1" showlabels></sdpi-range>
+    <sdpi-item label="Off URL">
+        <sdpi-textfield setting="urlOff" placeholder="https://google.com"></sdpi-textfield>
+    </sdpi-item>
+    <sdpi-item label="On URL">
+        <sdpi-textfield setting="urlOn" placeholder="https://elgato.com"></sdpi-textfield>
     </sdpi-item>
 </body>
-
 </html>

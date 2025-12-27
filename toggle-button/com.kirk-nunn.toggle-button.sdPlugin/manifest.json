@@ -6,7 +6,7 @@
 		{
 			"Name": "Website Toggle",
 			"UUID": "com.kirk-nunn.toggle-button.website-toggle",
-			"Icon": "imgs/actions/counter/icon",
+			"Icon": "imgs/actions/counter/key",
 			"Tooltip": "Toggles between two websites and icons.",
 			"PropertyInspectorPath": "ui/increment-counter.html",
 			"Controllers": [
