@@ -1,13 +1,13 @@
 {
-	"Name": "Toggle Website",
-	"Version": "1.0.1",
+	"Name": "Big Light",
+	"Version": "0.1.0.0",
 	"Author": "Kirk Nunn",
 	"Actions": [
 		{
-			"Name": "Website Toggle",
-			"UUID": "com.kirk-nunn.toggle-button.website-toggle",
-			"Icon": "imgs/actions/counter/key",
-			"Tooltip": "Toggles between two websites and icons.",
+			"Name": "Counter",
+			"UUID": "com.kirk-nunn.big-light.increment",
+			"Icon": "imgs/actions/counter/icon",
+			"Tooltip": "Displays a count, which increments by one on press.",
 			"PropertyInspectorPath": "ui/increment-counter.html",
 			"Controllers": [
 				"Keypad"
@@ -15,21 +15,15 @@
 			"States": [
 				{
 					"Image": "imgs/actions/counter/key",
-					"Title": "Off",
-					"TitleAlignment": "bottom"
-				},
-				{
-					"Image": "imgs/plugin/marketplace",
-					"Title": "On",
-					"TitleAlignment": "bottom"
+					"TitleAlignment": "middle"
 				}
 			]
 		}
 	],
-	"Category": "Toggle Button",
+	"Category": "Big Light",
 	"CategoryIcon": "imgs/plugin/category-icon",
 	"CodePath": "bin/plugin.js",
-	"Description": "Toggles websites and icons",
+	"Description": "Toggles biglight on/off",
 	"Icon": "imgs/plugin/marketplace",
 	"SDKVersion": 3,
 	"Software": {
@@ -49,5 +43,5 @@
 		"Version": "20",
 		"Debug": "enabled"
 	},
-	"UUID": "com.kirk-nunn.toggle-button"
+	"UUID": "com.kirk-nunn.big-light"
 }

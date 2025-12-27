@@ -11,22 +11,28 @@ export class ToggleButton extends SingletonAction<ToggleSettings> {
 	}
 
 	override async onKeyDown(ev: KeyDownEvent<ToggleSettings>): Promise<void> {
-		let state = ev.payload.settings.currentState ?? 0;
-		state = state === 0 ? 1 : 0;
-
-		const urlOff = "https://www.google.com"; 
-		const urlOn = "https://www.elgato.com";
-
-		await streamDeck.system.openUrl(state === 1 ? urlOn : urlOff);
-
-		await ev.action.setSettings({ currentState: state });
+		// Destructure settings to get user-defined URLs
+		const { 
+			currentState = 0, 
+			urlOff = "https://www.google.com", 
+			urlOn = "https://www.elgato.com" 
+		} = ev.payload.settings;
+	
+		const newState = currentState === 0 ? 1 : 0;
+	
+		// Use the settings from the UI
+		await streamDeck.system.openUrl(newState === 1 ? urlOn : urlOff);
+	
+		await ev.action.setSettings({ ...ev.payload.settings, currentState: newState });
 		
 		if ("setState" in ev.action) {
-			await ev.action.setState(state);
+			await ev.action.setState(newState);
 		}
 	}
 }
 
 type ToggleSettings = {
-	currentState?: number;
+    currentState?: number;
+    urlOff?: string; // Add these to your type
+    urlOn?: string;
 };
