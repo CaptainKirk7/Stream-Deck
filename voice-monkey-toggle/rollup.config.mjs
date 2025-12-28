@@ -6,7 +6,7 @@ import path from "node:path";
 import url from "node:url";
 
 const isWatching = !!process.env.ROLLUP_WATCH;
-const sdPlugin = "com.kirk-nunn.big-light.sdPlugin";
+const sdPlugin = "com.kirk-nunn.voice-monkey-toggle-button.sdPlugin";
 
 /**
  * @type {import('rollup').RollupOptions}

@@ -1,12 +1,13 @@
 import streamDeck from "@elgato/streamdeck";
 
-import { ToggleButton } from "./actions/website-toggle";
+import { ActionToggle } from "./actions/action-toggle";
+
 
 // We can enable "trace" logging so that all messages between the Stream Deck, and the plugin are recorded. When storing sensitive information
 streamDeck.logger.setLevel("trace");
 
 // Register the increment action.
-streamDeck.actions.registerAction(new ToggleButton());
+streamDeck.actions.registerAction(new ActionToggle());
 
 // Finally, connect to the Stream Deck.
 streamDeck.connect();
